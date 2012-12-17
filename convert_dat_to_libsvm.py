@@ -1,5 +1,10 @@
 import sys
 
+if len(sys.argv) < 3:
+	print 'No enough arguments'
+	print 'Usage: python convert_dat_to_libsvm origin_data_file output_libsvm_formatted_file'
+	exit()
+
 print 'Input: {0}\nOutput: {1}'.format(sys.argv[1], sys.argv[2])
 
 
