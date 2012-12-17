@@ -17,7 +17,8 @@ while len(inputLine) > 0:
 	# write prediction (y)
 	ofile.write(inputLine[0])
 	for i in range(1, len(inputLine)):
-		ofile.write(' {0}:{1}'.format(i, inputLine[i]))		
+		if inputLine[i] != '?':
+			ofile.write(' {0}:{1}'.format(i, inputLine[i]))		
 	
 	ofile.write('\n')
 	
