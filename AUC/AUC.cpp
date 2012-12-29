@@ -5,8 +5,8 @@ using namespace std;
 
 int main(int argc, char* argv[]){
 	if (argc < 2){
-		cout << "No enough input" << endl;
-		cout << "Usage:./AUC prediction data label" << endl;
+		cout << "No enough inputs" << endl;
+		cout << "Usage:./AUC prediction label" << endl;
 	}
 
 	
@@ -21,7 +21,6 @@ int main(int argc, char* argv[]){
 	while (!labelFile.eof()){
 		labelFile >> label;
 		predFile >> pred;
-//		cout << "(pred, label) = (" << pred << ", " << label << ")" << endl; 
 		EvalItem tmp(pred, label, 0);
 		input.push_back(tmp);
 	}
